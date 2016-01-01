@@ -68,6 +68,12 @@ class SettingsViewController: UIViewController {
         }
         else {
             self.view.backgroundColor = UIColor.whiteColor()
+            tipLabel.textColor = UIColor.blackColor()
+            themeLabel.textColor = UIColor.blackColor()
+            defaultControl.tintColor = UIColor.blackColor()
+            defaultTheme.tintColor = UIColor.blackColor()
+            currencyControl.tintColor = UIColor.blackColor()
+            
         }
         // print(themeSetting)
         // print(defaultTip)
