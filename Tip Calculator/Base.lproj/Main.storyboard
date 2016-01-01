@@ -13,15 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="Enter Bill" textAlignment="right" minimumFontSize="17" id="xdp-Oy-P2C">
-                                <rect key="frame" x="95" y="79" width="105" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="onEditingchange:" destination="BYZ-38-t0r" eventType="editingChanged" id="dXj-Ie-j38"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="93t-XT-hqQ">
                                 <rect key="frame" x="203" y="395" width="91" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -74,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t77-G9-mUt">
-                                <rect key="frame" x="66" y="87" width="51" height="21"/>
+                                <rect key="frame" x="58" y="87" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.34999999999999998" y="0.0" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -257,10 +248,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currency Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yfQ-g4-ySc">
                                 <rect key="frame" x="111" y="355" width="117" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.12549020350000001" green="0.27843138579999999" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.066666670139999995" green="0.32941177490000001" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="Enter Bill" textAlignment="right" minimumFontSize="17" id="xdp-Oy-P2C">
+                                <rect key="frame" x="100" y="79" width="105" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="onEditingchange:" destination="BYZ-38-t0r" eventType="editingChanged" id="dXj-Ie-j38"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431904315948" green="0.89411771297454834" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
                         <accessibility key="accessibilityConfiguration">
@@ -282,6 +283,7 @@
                     <connections>
                         <outlet property="billField" destination="xdp-Oy-P2C" id="Uyk-Vj-qkD"/>
                         <outlet property="currencyName" destination="yfQ-g4-ySc" id="V6u-fL-rTh"/>
+                        <outlet property="currencySymbol" destination="t77-G9-mUt" id="vy8-Lf-JZY"/>
                         <outlet property="finalBill" destination="3NY-4G-TGm" id="KZX-F0-80l"/>
                         <outlet property="personFour" destination="vRL-i1-q57" id="84Q-rs-dnt"/>
                         <outlet property="personOne" destination="39I-fy-g9H" id="blc-iM-FK0"/>

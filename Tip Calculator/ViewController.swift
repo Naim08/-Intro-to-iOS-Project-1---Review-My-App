@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    @IBOutlet weak var currencySymbol: UILabel!
     @IBOutlet weak var currencyName: UILabel!
     @IBOutlet weak var personFour: UILabel!
     @IBOutlet weak var personThree: UILabel!
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
     var serviceTip = 0.01;
     var currencyValue: [Double] = [1.00, 0.92, 6.51, 0.68, 1.00]
     var currencyNameOf: [String] = ["dollar", "Pound", "Yuan", "Euro", "Franc"]
+    var currencySymbolOf: [String] = ["$", "£", "¥", "€", "₣"]
     var currencyIndex = 1.00;
     
     @IBOutlet weak var imageController: UICollectionView!
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
         currencyIndex = currencyValue[currencySetting]
         print(currencyIndex)
         currencyName.text = currencyNameOf[currencySetting]
+        currencySymbol.text = currencySymbolOf[currencySetting]
         // print(themeSetting)
         if themeSetting == 1 {
             self.view.backgroundColor = UIColor.cyanColor()
