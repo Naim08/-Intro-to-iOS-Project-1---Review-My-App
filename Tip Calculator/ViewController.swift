@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var personOne: UILabel!
     var venueTip = 0.02;
     var serviceTip = 0.01;
-    var currencyValue: [Double] = [1.00, 0.92, 6.51, 0.68, 1.00]
     var currencyNameOf: [String] = ["dollar", "Pound", "Yuan", "Euro", "Franc"]
     var currencySymbolOf: [String] = ["$", "£", "¥", "€", "₣"]
     var currencyIndex = 1.00;
@@ -52,7 +51,6 @@ class ViewController: UIViewController {
         let themeSetting = defaults.integerForKey("themeIndex")
         let currencySetting = defaults.integerForKey("currencyIndex")
         print(currencySetting)
-        currencyIndex = currencyValue[currencySetting]
         print(currencyIndex)
         currencyName.text = currencyNameOf[currencySetting]
         currencySymbol.text = currencySymbolOf[currencySetting]
@@ -95,7 +93,7 @@ class ViewController: UIViewController {
         var totalTip = serviceTip + venueTip + tipPercentage
         print(totalTip)
         let tip = billAmount * totalTip
-        let total = (billAmount + tip) * currencyIndex
+        let total = (billAmount + tip)
         
         tipLabel.text = "$ \(tip)"
         finalBill.text = "$ \(total)"
